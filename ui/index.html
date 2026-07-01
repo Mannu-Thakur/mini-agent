@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mini Agent — AI Assistant</title>
+<meta name="description" content="A GPT-like AI assistant powered by Mini Agent with weather, calculator, and search tools."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="style.css"/>
+
+<!-- GitHub Markdown Styling -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown-dark.min.css">
+
+<!-- Syntax Highlighting -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css">
+
+<!-- Markdown Renderer -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- HTML Sanitizer -->
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+<!-- Syntax Highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Mini Agent</span>
+    </div>
+
+    <button class="new-chat-btn" id="newChatBtn" title="New chat">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      New Chat
+    </button>
+  </div>
+
+  <div class="sidebar-section-label">Recent Chats</div>
+
+  <ul class="chat-history" id="chatHistory"></ul>
+
+  <div class="sidebar-footer">
+    <div class="model-badge">
+      <span class="model-dot"></span>
+      llama-3.3-70b
+    </div>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+  <!-- Header -->
+  <header class="topbar">
+    <button class="sidebar-toggle" id="sidebarToggle" title="Toggle sidebar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <span class="topbar-title" id="topbarTitle">New Conversation</span>
+
+    <button class="debug-toggle" id="debugToggle" title="Toggle debug panel">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+      </svg>
+      Debug
+    </button>
+  </header>
+
+  <!-- Messages -->
+  <section class="messages-wrap" id="messagesWrap">
+    <div class="messages" id="messages">
+
+      <div class="welcome">
+        <div class="welcome-icon">⚡</div>
+        <h1>Mini Agent</h1>
+        <p>
+          Ask me anything. I can chat, check weather, do math,
+          and search the web.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Input -->
+  <div class="input-area">
+    <div class="input-box">
+
+      <textarea
+        id="userInput"
+        placeholder="Message Mini Agent…"
+        rows="1"></textarea>
+
+      <button class="send-btn" id="sendBtn" title="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <p class="input-hint">
+      Mini Agent can make mistakes. Verify important information.
+    </p>
+  </div>
+
+</main>
+
+<!-- Debug Panel -->
+<aside class="debug-panel" id="debugPanel">
+
+  <div class="debug-header">
+    <span>Debug Trace</span>
+    <button class="debug-close" id="debugClose">✕</button>
+  </div>
+
+  <div class="debug-body" id="debugBody">
+    <p class="debug-empty">No tool calls yet.</p>
+  </div>
+
+</aside>
+
+<!-- Your application -->
+<script src="app.js"></script>
+
+</body>
+</html>
