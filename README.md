@@ -188,4 +188,14 @@ The UI mentions:
 
 The agent trace panel also labels these tool categories in the UI. 
 
+<img width="949" height="532" alt="image" src="https://github.com/user-attachments/assets/921eb413-4088-41b8-a0e7-b811d40c11bf" />
+<img width="954" height="533" alt="image" src="https://github.com/user-attachments/assets/62b7df10-a8fe-432a-833e-49c457c0a36e" />
+<img width="959" height="524" alt="image" src="https://github.com/user-attachments/assets/cf3654da-3092-4c3b-a3c2-ce2afab9accd" />
+<img width="959" height="536" alt="image" src="https://github.com/user-attachments/assets/81405bc8-589a-42d6-9249-fd301800ccf2" />
+<img width="955" height="531" alt="image" src="https://github.com/user-attachments/assets/c21b947d-112d-4d17-8cdb-4c14c2f0c5eb" />
+
+
+
+
+
  
